@@ -16,7 +16,9 @@ describe('Park', function() {
     assert.strictEqual(park.ticketPrice, 50)
   });
 
-  it('should have a collection of dinosaurs');
+  it('should have a collection of dinosaurs', function (){
+    assert.deepStrictEqual(park.collectionOfDinosaurs,['Diplodocus','Brontosaurus','Triceratops'])
+  });
 
   it('should be able to add a dinosaur to its collection');
 
