@@ -15,25 +15,30 @@ describe('Park', function() {
   })
 
   it('should have a name', function (){
-    assert.strictEqual(park.name, 'Jurassic Park')
+    assert.strictEqual(park.name, 'Jurassic Park');
   });
 
   it('should have a ticket price', function (){
-    assert.strictEqual(park.ticketPrice, 50)
+    assert.strictEqual(park.ticketPrice, 50);
   });
 
   it('should have a collection of dinosaurs', function (){
-    park.dinosaurs.push(dinosaur1)
-    park.dinosaurs.push(dinosaur2)
-    assert.deepStrictEqual(park.dinosaurs, [dinosaur1, dinosaur2])
+    park.dinosaurs.push(dinosaur1);
+    park.dinosaurs.push(dinosaur2);
+    assert.deepStrictEqual(park.dinosaurs, [dinosaur1, dinosaur2]);
   });
 
   it('should be able to add a dinosaur to its collection', function (){
-    // park.collectionOfDinosaurs.push('T-Rex')
-    // assert.deepStrictEqual(park.collectionOfDinosaurs.length, 4);
+    park.dinosaurs = [dinosaur1, dinosaur2];
+    park.dinosaurs.push(dinosaur3);
+    assert.deepStrictEqual(park.dinosaurs, [dinosaur1, dinosaur2, dinosaur3]);
   });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function (){
+    park.dinosaurs = [dinosaur1, dinosaur2, dinosaur3];
+    park.dinosaurs.pop();
+    assert.deepStrictEqual(park.dinosaurs, [dinosaur1, dinosaur2]);
+  });
 
   it('should be able to find the dinosaur that attracts the most visitors');
 
