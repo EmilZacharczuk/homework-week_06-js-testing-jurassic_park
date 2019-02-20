@@ -48,7 +48,10 @@ describe('Park', function() {
     assert.deepStrictEqual(park.mostVisitors(), 'T-Rex');
   });
 
-  it('should be able to find all dinosaurs of a particular species',);
+  it('should be able to find all dinosaurs of a particular species', function() {
+    park.dinosaurs = [dinosaur1, dinosaur2, dinosaur3];
+    assert.deepStrictEqual(park.findBySpecies('T-Rex'), [dinosaur1.species]);
+  });
 
   it('should be able to remove all dinosaurs of a particular species');
 

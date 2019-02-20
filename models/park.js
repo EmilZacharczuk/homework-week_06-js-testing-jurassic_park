@@ -20,15 +20,15 @@ Park.prototype.mostVisitors = function () {
   return dinosaur.species;
 };
 
-// Park.prototype.findBySpecies = function (species) {
-//   let result = [];
-//   for (const dinosaur of this.dinosaurs) {
-//     if (dinosaur.species === species)
-//     result.push(dinosaur)
-//   }
-//   return console.log(result);
-// };
-//
+Park.prototype.findBySpecies = function (species) {
+  let result = [];
+  for (const dinosaur of this.dinosaurs) {
+    if (dinosaur.species === species)
+    result.push(dinosaur.species)
+  }
+  return result;
+};
+
 // Park.prototype.totalNumberOfVisitorsPerYear = function () {
 //   let total = 0;
 //   for (const dinosaur of this.dinosaurs) {}
